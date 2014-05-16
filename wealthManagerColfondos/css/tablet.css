@@ -1,0 +1,212 @@
+@media screen and (min-width: 501px) and (max-width:768px) {
+	header {
+		margin-top: -16px
+	}
+	.container {
+		width: 90%;
+	}
+
+	.right-off-canvas-toggle{
+		display: block;
+	}
+
+	nav ul li {
+		display: none;
+		visibility: hidden;
+	}
+	.back .brand-device {
+		background-size: contain;
+		left: 3%;
+	}
+	.right-off-canvas-menu {
+		overflow: visible;
+		visibility: visible;
+	}
+	.intro-page {
+    	padding-top: 150px;
+	}
+	.intro-page-3 {
+	    padding-top: 22%;
+	}
+	.description {
+		 line-height: 24px;
+	}
+	.space {
+		float: none;
+    	width: 100%;
+	}
+	.2line {
+		display: none;
+	}
+	.text-general {
+		line-height: 24px;
+    	text-align: center;
+	}
+	.back .brand-device{
+    	height: auto;
+    	left: auto;
+    	margin: 0 auto;
+    	padding-bottom: 50%;
+    	padding-top: 40%;
+   	 	top: 30%;
+    	width: 512px;
+	}
+	.width-video {
+    	display: block;
+    	position: relative;
+    	left: 0%;
+    	right: 0;
+    	margin-top: 20px;
+	}
+	.width-video-2 {
+    	display: block;
+    	position: relative;
+    	left: 0%;
+    	right: 0;
+    	margin-top: 20px;
+	}
+	iframe {
+	    margin: 0 auto;
+	    padding-left: 0;
+	    margin-top: 30px;
+	    width: 100%;
+	}
+	.franja-blanca {
+		text-align: center;
+		 margin-bottom: 14%;
+		 margin-top: 3%;
+		 height: auto;
+		 padding-top: 6%;
+	}
+	.franja-blanca-2 {
+    	padding: 7% 0 7% 20px;
+    	text-align: center;
+    	margin-bottom: 12%;
+    	height: auto;
+	}
+	.franja-blanca-3 {
+    	padding: 7% 0 7% 20px;
+    	text-align: center;
+    	margin-bottom: 12%;
+    	height: auto;
+	}
+	.footer {
+		padding-bottom: 4%;
+	   	position: relative;
+	}
+	.footer-2 {
+		float: left;
+	    margin-left: 0;
+	    padding: 0;
+	}
+	.footer-2 ul{
+		text-align: center;
+		padding-bottom: 4%;
+	   	position: relative;
+	}
+	.redes {
+	    display: inline-block;
+	    margin-left: 30px;
+	    margin-top: 40px;
+	}
+	.menu-soluciones > li{
+		margin-right: 38px;
+		width: auto;
+	}
+	.asesoria {
+		background-size: 92% auto;
+		font-size: 16px;
+		line-height: 0;
+		padding-top: 94%;
+		text-align: center;
+	}
+	.orientacion{
+		background-size: 77% auto;
+		font-size: 16px;
+		line-height: 0;
+		padding-top: 94%;
+		text-align: center;
+	}
+	.gestion {
+		background-size: 84% auto;
+		font-size: 16px;
+		line-height: 0;
+		padding-top: 104%;
+		text-align: center;
+	}
+	.planeacion {
+		background-size: 100% auto;
+		font-size: 16px;
+		line-height: 0;
+		padding-top: 94%;
+		text-align: center;
+	}
+	.call-to-action-1 {
+		padding-bottom: 10%;
+		padding-top: 3%;
+	}
+	.call-to-action-1 p {
+		width: 88%;
+	}
+	.boton {
+		margin-right: 42%;
+		margin-top: 1%;
+
+	}
+	.call-to-action-circulo{
+		margin: 0 auto;
+		margin-top: 20px;
+		padding: 6% 0 ;
+    	float: none;
+	}
+	.col-1 {
+		padding-left: 22%;
+	}
+	.col-2 {
+		padding-left: 22%;
+	}
+
+	.box-form {
+	    margin: 5% auto 15%;
+	    width: 90%;
+	}
+	.gestion > img {
+	    width: 85%;
+	}
+	.orientacion > img {
+	    width: 78%;
+	}
+	.asesoria > img {
+	    width: 81%;
+	}
+	.planeacion > img {
+	    width: 75%;
+	}
+	
+	/* Fondos tablet*/
+
+	.back {
+		background-attachment: fixed;
+	    background-image: url("../img/home/bg-m.jpg");
+	    background-size: cover;
+	}
+	.back-que-es {
+		background-attachment: fixed;
+	    background-image: url("../img/que_es/bg-m.png");
+	    background-size: cover;
+	}
+	.back-respaldo {
+		background-attachment: fixed;
+	    background-image: url("../img/respaldo/bg-m.png");
+	}
+	.back-circulo {
+		background-attachment: fixed;
+		background-image: url("../img/circulo/bg-c.jpg");
+	}
+	.back-contacto {
+		background-attachment: fixed;
+		background-image: url("../img/contacto/bg-m.png");
+	}
+
+}
+	

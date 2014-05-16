@@ -1,0 +1,10 @@
+.menu-soluciones > li {
+	margin-right: 3%;
+}
+.width-video {
+    display: block;
+    left: 50%;
+    position: absolute;
+    right: 0;
+    top: 28%;
+}

@@ -1,0 +1,30 @@
+@media screen and (min-width: 769px) and (max-width:1024px) {
+	header {
+		display: block;
+		width:  50%;
+	}
+	nav {
+		overflow: hidden;
+	}
+	nav .container ul{
+		padding: 0;
+		width: 70%;
+	}
+	nav ul li {
+		background-color: #fff;
+		display: block;
+		width: 50%;
+	}
+	.container {
+    margin: 0 auto;
+    width: 80%;
+	}
+	section .video span.brand {
+    left: 26%;
+	}
+	footer .container span.vgl {
+    left: -14px;
+    position: fixed;
+    top: 74%;
+	}
+}
