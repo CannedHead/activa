@@ -10,7 +10,8 @@
    Base styles: opinionated defaults
    ========================================================================== */
 body {
-    background-color: #999;
+    /*background-color: #999;*/
+
          -webkit-animation: fadein 1.3s; /* Safari and Chrome */
        -moz-animation: fadein 1.3s; /* Firefox */
         -ms-animation: fadein 1.3s; /* Internet Explorer */
@@ -1415,6 +1416,66 @@ iframe {
     text-align: center;
     width: 100%;
 }
+
+/* estilos video*/
+video{
+  overflow:hidden;
+  position:absolute;
+  height:100%;
+  width:100%;
+  top:0;
+  left:0;
+  -webkit-transition:background-color 1000ms linear;
+  -moz-transition:background-color 1000ms linear;
+  -o-transition:background-color 1000ms linear;
+  -ms-transition:background-color 1000ms linear;
+}
+
+#video {
+  z-index: -100;
+  overflow:hidden;
+  position:fixed;
+  height:100%;
+  width:100%;
+  top:0;
+  left:0;
+  -webkit-transition:background-color 1000ms linear;
+  -moz-transition:background-color 1000ms linear;
+  -o-transition:background-color 1000ms linear;
+  -ms-transition:background-color 1000ms linear;
+
+  -webkit-animation: videofade 22s infinite; /* Safari 4+ */
+  -moz-animation:    videofade 22s infinite; /* Fx 5+ */
+  -o-animation:      videofade 22s infinite; /* Opera 12+ */
+  animation:         videofade 22s infinite; /* IE 10+ */
+
+}  
+
+@-webkit-keyframes videofade {
+  0%   { opacity: 0; }
+  1%   { opacity: 1; }
+  99%   { opacity: 1; }
+  100% { opacity: 0; }
+}
+@-moz-keyframes videofade {
+  0%   { opacity: 0; }
+  1%   { opacity: 1; }
+  99%   { opacity: 1; }
+  100% { opacity: 0; }
+}
+@-o-keyframes videofade{
+  0%   { opacity: 0; }
+  1%   { opacity: 1; }
+  99%   { opacity: 1; }
+  100% { opacity: 0; }
+}
+@keyframes fade {
+  0%   { opacity: 0; }
+  1%   { opacity: 1; }
+  99%   { opacity: 1; }
+  100% { opacity: 0; }
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
