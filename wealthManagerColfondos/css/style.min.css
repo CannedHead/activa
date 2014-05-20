@@ -1,0 +1,230 @@
+html,body{
+	width:100%;
+	height:100%;
+	margin:0;
+	padding:0;
+	overflow-x:hidden;
+}
+
+body{
+	background-color:#FFFFFF;
+	transition:.8s
+}
+
+body,.video-box{
+	background-repeat:no-repeat;
+	background-size:cover
+}
+
+.video-box{
+	opacity:0;
+	background-position:50% 50%
+}
+
+.video-box.tall,.video-box.wide{
+	-webkit-transition:background-position 6s;
+	-moz-transition:background-position 6s;
+	-o-transition:background-position 6s;
+	-ms-transition:background-position 6s;
+	transition:background-position 6s
+}
+
+.video-box.tall{
+	background-size:auto 110%
+}
+
+.video-box.tall.expand{
+	background-position:50% 60%
+}
+
+.video-box.wide{
+	background-size:110% auto
+}
+
+.video-box.wide.expand{
+	background-position:60% 50%
+}
+
+.video-box.no-bg{
+	background-image:none!important
+}
+
+.navbar{
+	position:fixed;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:60px;
+	z-index:5;
+	color:white;
+	background-color:white;
+}
+
+p,pre{
+	margin:0
+}
+
+
+video.hidden{
+	opacity:0!important
+}
+
+video.transition{
+	-webkit-transition:opacity .25s;
+	-moz-transition:opacity .25s;
+	-o-transition:opacity .25s;
+	-ms-transition:opacity .25s;
+	transition:opacity .25s
+}
+
+video.transparent{
+	opacity:0
+}
+
+#images,#video{
+	z-index:1
+}
+
+#video{
+	overflow:hidden;
+	position:fixed;
+	height:100%;
+	width:100%;
+	top:0;
+	left:0;
+	-webkit-transition:background-color 1000ms linear;
+	-moz-transition:background-color 1000ms linear;
+	-o-transition:background-color 1000ms linear;
+	-ms-transition:background-color 1000ms linear;
+	transition:background-color 1000ms linear
+}
+
+.video-box:last-of-type{
+	position:absolute;
+	width:100%;
+	height:100%;
+	z-index:-1
+}
+
+.video-box{
+	position:absolute;
+	width:100%;
+	height:100%;
+	z-index:-2
+}
+
+#images{
+	overflow:hidden;
+	position:absolute;
+	height:100%;
+	width:100%;
+	top:0;
+	left:0;
+	-webkit-transition:background-color 1000ms linear;
+	-moz-transition:background-color 1000ms linear;
+	-o-transition:background-color 1000ms linear;
+	-ms-transition:background-color 1000ms linear;
+	transition:background-color 1000ms linear
+}
+
+.image-box{
+	overflow:hidden;
+	position:absolute;
+	width:100%;
+	height:100%;
+	z-index:-2;
+	opacity:0
+}
+
+#image-slide1{
+	z-index:-1;
+	opacity:1
+}
+
+.image-slide{
+	position:absolute
+}
+
+@media screen and (max-width:1024px){
+	#images{
+		overflow:hidden;
+		position:absolute;
+		height:100%;
+		width:110%;
+		top:0;
+		left:0;
+		-webkit-transition:background-color 1000ms linear;
+		-moz-transition:background-color 1000ms linear;
+		-o-transition:background-color 1000ms linear;
+		-ms-transition:background-color 1000ms linear;
+		transition:background-color 1000ms linear
+	}
+
+	#slide-image1{
+		overflow:hidden;
+		position:absolute;
+		width:110%;
+		height:100%;
+		z-index:-1
+	}
+
+	#slide-image2,#slide-image3,#slide-image4,#slide-image5,#slide-image6,#slide-image7,#slide-image8,#slide-image9{
+		overflow:hidden;
+		position:absolute;
+		width:110%;
+		height:100%;
+		z-index:-2
+	}
+
+	.grid_1,.grid_2,.grid_3,.grid_4,.grid_6,.grid_7,.grid_8,.grid_9,.grid_10,.grid_11,.grid_12{
+		width:75%
+	}
+}
+
+@media screen and (max-width:768px){
+	#images{
+		overflow:hidden;
+		position:absolute;
+		height:100%;
+		width:110%;
+		top:0;
+		left:-5%;
+		-webkit-transition:background-color 1000ms linear;
+		-moz-transition:background-color 1000ms linear;
+		-o-transition:background-color 1000ms linear;
+		-ms-transition:background-color 1000ms linear;
+		transition:background-color 1000ms linear
+	}
+
+	#slide-image1{
+		overflow:hidden;
+		position:absolute;
+		width:110%;
+		height:100%;
+		z-index:-1
+	}
+
+	#slide-image2,#slide-image3,#slide-image4,#slide-image5,#slide-image6,#slide-image7,#slide-image8,#slide-image9{
+		overflow:hidden;
+		position:absolute;
+		width:110%;
+		height:100%;
+		z-index:-2
+	}
+
+}
+
+@media screen and (max-width:718px){
+	.grid_1,.grid_2,.grid_3,.grid_4,.grid_5,.grid_6,.grid_7,.grid_8,.grid_9,.grid_10,.grid_11,.grid_12{
+		width:95%
+	}
+}
+
+
+@media screen  and (max-width:500px) {
+
+	#video{
+		display: none;
+	}
+
+}
