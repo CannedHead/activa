@@ -5,8 +5,7 @@
             if (screen_width > 500) {
                 $('#wrapper').css('height', screen_height);
                 $('body').attr({
-                    onload: 'resize()',
-                    onresize: 'resize()',
+                    onload: 'resize()',                    
                 });
             };
 
@@ -57,7 +56,6 @@
 
     function resize() {
     // the more standards compliant browsers (mozilla/netscape/opera/IE7) use window.innerWidth and window.innerHeight
-
 
     if (typeof window.innerWidth != 'undefined') {
     viewportwidth = window.innerWidth,

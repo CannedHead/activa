@@ -1,8 +1,9 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <html>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -29,7 +30,68 @@
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
        
     </head>
-    <body class="off-canvas-wrap docs-wrap" data-offcanvas onload="" onresize="">
+    <body class="off-canvas-wrap docs-wrap">
+        <!-- video and img background-->
+        <div id="video" style="z-index:-2"></div>
+        <script type="text/javascript">
+
+            // Remove no-script background image
+            document.body.style.backgroundImage = 'none';
+
+            // Avoid cropped background when the page has y-overflow
+            fixBackgroundHeight();
+            console.log('when reload test ......');
+
+            window.onresize = function()
+            {
+                var wh = $(window).height();
+                var ww = $(window).width();
+                var ratio = wh/ww;
+
+                // Avoid cropped background when the page has y-overflow
+                fixBackgroundHeight();
+                console.log('when resize');
+                // Resize the background items
+                sizeVideoBg(ratio);
+                sizeVideo(ratio);
+            
+            };
+
+            // Load first video
+            loadMediaFirst();
+
+            // Waits till the page ends loading
+            $(window).bind('load', function()
+            {
+                // Avoid cropped background when the page has y-overflow
+                fixBackgroundHeight();
+
+                // Start to load the assets
+                loadMediaSecond();
+
+                setTimeout("first_slide_ocurred = true;", 4300);
+
+                setTimeout(function()
+                {
+                    if(first_video_loaded && second_video_loaded)
+                    {
+                        console.log('Enough bandwidth to load videos');
+                        enough_bw = true;
+                    }
+                    else
+                    {
+                        $('video').html('');
+                    }
+                }, 4600);
+
+                if(!mobileCheck())
+                {
+                    loopVideo();
+                }
+                
+            });
+        
+        </script>            
         <div class="off-canvas-wrap docs-wrap" data-offcanvas><!--div envol-->
             <div class="inner-wrap">
                 <aside  class="right-off-canvas-menu">
@@ -80,73 +142,8 @@
                             </nav>
                         </div>
                     </header>
-                    <!-- video and img background-->
-                        <div id="video" style="z-index:-2"></div>
                        
-                        <script type="text/javascript">
-
-                            // Remove no-script background image
-                            document.body.style.backgroundImage = 'none';
-
-                            // Avoid cropped background when the page has y-overflow
-                            fixBackgroundHeight();
-
-                            window.onresize = function()
-                            {
-                                var wh = $(window).height();
-                                var ww = $(window).width();
-                                var ratio = wh/ww;
-
-                                // Avoid cropped background when the page has y-overflow
-                                fixBackgroundHeight();
-
-                                // Resize the background items
-                                if(!mobileCheck())
-                                {
-                                    sizeVideoBg(ratio);
-                                    sizeVideo(ratio);
-                                }
-                                else
-                                {
-                                    sizeImage(ratio);
-                                }
-                            };
-
-                            // Load first video
-                            loadMediaFirst();
-
-                            // Waits till the page ends loading
-                            $(window).bind('load', function()
-                            {
-                                // Avoid cropped background when the page has y-overflow
-                                fixBackgroundHeight();
-
-                                // Start to load the assets
-                                loadMediaSecond();
-
-                                setTimeout("first_slide_ocurred = true;", 4300);
-
-                                setTimeout(function()
-                                {
-                                    if(first_video_loaded && second_video_loaded)
-                                    {
-                                        console.log('Enough bandwidth to load videos');
-                                        enough_bw = true;
-                                    }
-                                    else
-                                    {
-                                        $('video').html('');
-                                    }
-                                }, 4600);
-
-                                if(!mobileCheck())
-                                {
-                                    loopVideo();
-                                }
-                                
-                            });
                         
-                        </script>
                     <!-- End video and img background-->
                     <section id="wrapper" class="back">
                         <div class="vigilado">
@@ -179,8 +176,6 @@
 
         <!-- Add your site or application content here -->
         
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
         <script src="js/foundation.min.js"></script>
@@ -198,4 +193,4 @@
         </script>
 
     </body>
-</html>
+    </html>

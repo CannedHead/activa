@@ -16,14 +16,9 @@ function correctImage(id){
 
 function fixBackgroundHeight(){
 
-	if($("#Registration").height()>$("body").height()){
+		$("#images, #video, #off-canvas-wrap docs-wrap").css("height",getDocumentHeight()+"px");
 
-		$("#images, #video").css("height",getDocumentHeight()+"px");
-
-	}else{
-
-		$("#images, #video").css("height","");
-	}
+	
 }
 
 function getDocumentHeight(){
@@ -179,12 +174,14 @@ function sizeVideo(ratio){
 	if(typeof ratio=="undefined"){
 		ratio=getDocumentRatio();
 	}
-	if(ratio<9/16){
+	if(ratio<720/1280){
 		console.log("width : 100%");
 		$("video").css("width","100%").css("height","auto");
+		
 	}else{
 		console.log("heigth  : 100%");
 		$("video").css("width","auto").css("height","100%");
+
 	}
 }
 
