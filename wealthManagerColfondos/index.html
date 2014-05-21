@@ -1,9 +1,8 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <html>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,80 +17,24 @@
         <link rel="stylesheet" href="css/movil.css">
         <link rel="stylesheet" href="css/desktop.css">
         <link rel="stylesheet" href="css/foundation.css">
+
+        <link rel="stylesheet" href="css/style.min.css" type="text/css" media="screen">
+        <script type="text/javascript" src="js/wide-video.js"></script>
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
         <!--[if IE 8]>
         <link rel="stylesheet" type="text/css" href="css/ie8.css" />
         <![endif]-->
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,300,700' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="css/style.min.css" type="text/css" media="screen">
-        <script type="text/javascript" src="js/jquery.min.js"></script>
-        <script type="text/javascript" src="js/wide-video.js"></script>
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
        
     </head>
-    <body class="off-canvas-wrap docs-wrap">
-        <!-- video and img background-->
+    <body class="off-canvas-wrap docs-wrap" data-offcanvas onload="" onresize="">
+        <!-- Begin video and image background-->
         <div id="video" style="z-index:-2"></div>
-        <script type="text/javascript">
-
-            // Remove no-script background image
-            document.body.style.backgroundImage = 'none';
-
-            // Avoid cropped background when the page has y-overflow
-            fixBackgroundHeight();
-            console.log('when reload test ......');
-
-            window.onresize = function()
-            {
-                var wh = $(window).height();
-                var ww = $(window).width();
-                var ratio = wh/ww;
-
-                // Avoid cropped background when the page has y-overflow
-                fixBackgroundHeight();
-                console.log('when resize');
-                // Resize the background items
-                sizeVideoBg(ratio);
-                sizeVideo(ratio);
-            
-            };
-
-            // Load first video
-            loadMediaFirst();
-
-            // Waits till the page ends loading
-            $(window).bind('load', function()
-            {
-                // Avoid cropped background when the page has y-overflow
-                fixBackgroundHeight();
-
-                // Start to load the assets
-                loadMediaSecond();
-
-                setTimeout("first_slide_ocurred = true;", 4300);
-
-                setTimeout(function()
-                {
-                    if(first_video_loaded && second_video_loaded)
-                    {
-                        console.log('Enough bandwidth to load videos');
-                        enough_bw = true;
-                    }
-                    else
-                    {
-                        $('video').html('');
-                    }
-                }, 4600);
-
-                if(!mobileCheck())
-                {
-                    loopVideo();
-                }
-                
-            });
-        
-        </script>            
+        <div id="images" style="z-index:-2"></div>
+        <!-- End video background-->
         <div class="off-canvas-wrap docs-wrap" data-offcanvas><!--div envol-->
             <div class="inner-wrap">
                 <aside  class="right-off-canvas-menu">
@@ -142,9 +85,6 @@
                             </nav>
                         </div>
                     </header>
-                       
-                        
-                    <!-- End video and img background-->
                     <section id="wrapper" class="back">
                         <div class="vigilado">
                             <img src="img/vgl.png"> 
@@ -176,11 +116,15 @@
 
         <!-- Add your site or application content here -->
         
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
         <script src="js/foundation.min.js"></script>
         <script type="text/javascript" src="js/top.js"></script>
-        
+        <script>
+          $(document).foundation();
+        </script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
@@ -192,5 +136,49 @@
             ga('create','UA-XXXXX-X');ga('send','pageview');
         </script>
 
+        <script type="text/javascript">
+            document.body.style.backgroundImage = 'none';
+
+            window.onresize = function(){
+
+                var wh = $(window).height();
+                var ww = $(window).width();
+                var ratio = wh/ww;
+
+                if(!mobileCheck()) {
+                    sizeVideoBg(ratio);
+                    sizeVideo(ratio);
+                }
+                else {
+                    sizeImage(ratio);
+                }            
+            };
+
+            loadMediaFirst();
+
+            $(window).bind('load', function(){
+                loadMediaSecond();
+
+                setTimeout("first_slide_ocurred = true;", 4300);
+
+                setTimeout(function()
+                {
+                    if(first_video_loaded && second_video_loaded){
+                        enough_bw = true;
+                    }
+                    else
+                    {
+                        $('video').html('');
+                    }
+                }, 4600);
+
+                if(!mobileCheck())
+                {
+                    loopVideo();
+                }
+                
+            });        
+        </script>    
+
     </body>
-    </html>
+</html>

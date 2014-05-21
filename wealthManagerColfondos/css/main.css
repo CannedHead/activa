@@ -308,8 +308,10 @@ nav ul li a{
     /*
       background-image: url("../img/home/bg.jpg");
       background-size: cover;
+      max-height: 1000px;      
+      background-attachment: fixed;
     */
-    max-height: 1000px;
+    
     height: auto;
     position: relative;
     width: 100%;
@@ -1443,38 +1445,8 @@ video{
   -moz-transition:background-color 1000ms linear;
   -o-transition:background-color 1000ms linear;
   -ms-transition:background-color 1000ms linear;
-
-  -webkit-animation: videofade 22s infinite; /* Safari 4+ */
-  -moz-animation:    videofade 22s infinite; /* Fx 5+ */
-  -o-animation:      videofade 22s infinite; /* Opera 12+ */
-  animation:         videofade 22s infinite; /* IE 10+ */
-
 }  
 
-@-webkit-keyframes videofade {
-  0%   { opacity: 0; }
-  1%   { opacity: 1; }
-  99%   { opacity: 1; }
-  100% { opacity: 0; }
-}
-@-moz-keyframes videofade {
-  0%   { opacity: 0; }
-  1%   { opacity: 1; }
-  99%   { opacity: 1; }
-  100% { opacity: 0; }
-}
-@-o-keyframes videofade{
-  0%   { opacity: 0; }
-  1%   { opacity: 1; }
-  99%   { opacity: 1; }
-  100% { opacity: 0; }
-}
-@keyframes fade {
-  0%   { opacity: 0; }
-  1%   { opacity: 1; }
-  99%   { opacity: 1; }
-  100% { opacity: 0; }
-}
 
 /* ==========================================================================
    Helper classes

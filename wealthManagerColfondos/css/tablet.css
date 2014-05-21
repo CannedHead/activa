@@ -1,4 +1,4 @@
-@media screen and (min-width: 501px) and (max-width:768px) {
+@media screen and (min-width: 501px) and (max-width:1024px) {
 	header {
 		margin-top: -16px
 	}
@@ -184,12 +184,11 @@
 	}
 	
 	/* Fondos tablet*/
-
+ 
 	.back {
-		background-attachment: fixed;
-	    background-image: url("../img/home/bg-m.jpg");
-	    background-size: cover;
 	}
+	
+	
 	.back-que-es {
 		background-attachment: fixed;
 	    background-image: url("../img/que_es/bg-m.png");
@@ -207,6 +206,5 @@
 		background-attachment: fixed;
 		background-image: url("../img/contacto/bg-m.png");
 	}
-
 }
 	

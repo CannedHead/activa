@@ -233,29 +233,28 @@
 	/* Fondos movil*/
 
 	.back {
-		background-attachment: fixed;
-	    background-image: url("../img/home/bg-m.jpg");
-	    background-size: cover;
-}
+	}
+
 	.back-que-es {
 		background-attachment: fixed;
 	    background-image: url("../img/que_es/bg-m.png");
 	    background-size: cover;
-}
+	}
 	.back-soluciones {
 		background-attachment: fixed;
 	    background-image: url("../img/soluciones/bg-m-s.png");
 	    background-size: cover;
-}
+	}
 	.back-respaldo {
 		background-attachment: fixed;
 	    background-image: url("../img/respaldo/bg-m.png");
-}
+	}
 	.back-circulo {
 		background-attachment: fixed;
 		background-image: url("../img/circulo/bg-c.jpg");
-}
+	}
 	.back-contacto {
 		background-attachment: fixed;
 		background-image: url("../img/contacto/bg-m.png");
+	}
 }

@@ -5,7 +5,7 @@
             if (screen_width > 500) {
                 $('#wrapper').css('height', screen_height);
                 $('body').attr({
-                    onload: 'resize()',                    
+                    onload: 'resize()'                
                 });
             };
 
@@ -78,3 +78,4 @@
     }
 
                                
+
