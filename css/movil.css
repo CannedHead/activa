@@ -1,0 +1,261 @@
+@media screen  and (max-width:500px) {
+
+	body {
+		overflow: scroll;
+	}
+	.container {
+		width: 90%;
+	}
+	.back-soluciones {
+    	height: auto;
+	}
+	.right-off-canvas-toggle{
+		display: block;
+	}
+
+	.back .brand-device{
+		background-size: contain;
+	    left: 3%;
+	    padding-bottom: 90%;
+	    padding-top: 50%;
+	    width: 80%;
+	}
+
+	nav ul li {
+		display: none;
+		visibility: hidden;
+	}
+	h2 {
+	    float: none;
+	    margin: 0 auto;
+	}
+	ul {
+		padding: 0;
+	}
+	header {
+		margin-top: 0;
+		height: 56px;
+		position: relative;
+	}
+	nav {
+		height: 46px;
+	}
+	h1 a img {
+    	height: 63%;
+    	margin-top: -36px;
+	}
+	.right-off-canvas-menu {
+		overflow: visible;
+		visibility: visible;
+	}
+	.intro-page {
+    	padding-top: 23%;
+	}
+	.intro-page-2 {
+    	padding-top: 23%;
+	}
+	.intro-page-3 {
+    	padding-top: 23%;
+	}
+	.description {
+		 line-height: 24px;
+	}
+	.space {
+		float: none;
+    	width: 100%;
+	}
+	.2line {
+		display: none;
+	}
+
+	.text-general {
+		line-height: 24px;
+    	text-align: center;
+	}
+	.redes {
+		float: none;
+	    margin: 0 auto;
+	}
+	.width-video {
+    	display: block;
+    	position: relative;
+    	left: 0%;
+    	right: 0;
+    	margin-top: 20px;
+    	width: 50%;
+	}
+	.width-video-2 {
+    	display: block;
+    	position: relative;
+    	left: 0%;
+    	right: 0;
+    	margin-top: 20px;
+    	width: 50%;
+	}
+	.width-video iframe{
+    	width: 190%;
+	}
+	.franja-blanca {
+		 margin-bottom: 18px;
+		 margin-top: 48px;
+		 height: auto;
+		 padding-top: 16%;
+	}
+	iframe {
+	    margin: 0 auto;
+	    margin-top: 20px;
+	    padding-left: 0;
+	    width: 100%
+	}
+	.vigilado {
+		bottom: 3%;
+	}
+	.footer {
+		position: relative;
+		text-align: center;
+	    bottom: 0;
+	    height: auto;
+	    padding-bottom: 4%;
+	    width: 100%;
+	}
+	.footer-2 {
+		text-align: center;
+		padding-bottom: 4%;
+	   	position: relative;
+	}
+	.box-nuestas-soluciones {
+		display: none;
+		overflow: hidden;
+		visibility: hidden;
+	}
+	.box-nuestas-soluciones-movil{
+	    overflow: scroll;
+	    text-align: center;
+	    visibility: visible;
+	    display:block;
+	}
+	.asesoria {
+	    padding-top: 34%;
+	}
+	.franja-blanca-2 {
+		height: 57%;
+    	padding: 10% 0 10% 20px;
+    	margin-bottom: 13%;
+	}
+	.franja-blanca-3 {
+		height: 57%;
+    	padding: 10% 0 50% 20px;
+	}
+	.box-nuestas-soluciones {
+    	margin: 0 auto;
+	}
+	.tit-soluciones {
+		padding: 0;
+	}
+	.box-into-soluciones-movil {
+		overflow: visible;
+		visibility: visible;
+		display: block;
+	}
+	.box-nuestas-soluciones-movil img {
+    	float: none;
+	}
+	.call-to-action-circulo {
+	    float: none;
+	    margin-left: -15px;
+	    margin-top: 26px;
+	    padding: 8% 0;	
+	}
+	.call-to-action-circulo p{
+		font-size: 16px;
+	}
+	.call-to-action-1 p{
+		width: 100%;
+	}
+	.call-to-action-1 {
+		 padding-bottom: 20%;
+	}
+	.boton {
+		margin-right: 38%;
+		margin-top: 4%;
+	}
+	.destacado {
+    	font-size: 20px;
+	}
+	.call-to-action-circulo {
+		width: 274px;
+	}
+	.call-to-action-circulo {
+		float: none;
+		padding: 8% 0;
+		margin-top: 20px;
+	}
+	.box-nuestas-soluciones-movil div {
+    	margin-top: 12%;
+	}
+	.col-1 {
+		background-position: top center;
+		float: none;
+		padding-top: 48%;
+		padding-left: 0;
+		text-align: center;
+		width: 100%;
+	}
+	.col-2 {
+		background-position: top center;
+		float: none;
+		padding-top: 48%;
+		padding-left: 0;
+		text-align: center;
+		width: 100%;
+	}
+	.box-form {
+	    margin: 5% auto 15%;
+	    width: 90%;
+	}
+	.input-right {
+	    float: 0;
+	    padding: 0;
+	    width: 100%;
+	}
+	.input-left {
+	    float: 0;
+	    padding: 0;
+	    width: 100%;
+	}
+	.tit-soluciones p{
+	    font-family: 'Roboto Slab',serif;
+	    font-size: 26px;
+	    font-weight: 700;
+	    line-height: 31px;
+	    padding: 5% 0;
+	}
+	/* Fondos movil*/
+
+	.back {
+		position:relative;
+	}
+
+	.back-que-es {
+		background-attachment: fixed;
+	    background-image: url("../img/que_es/bg-m.png");
+	    background-size: cover;
+	}
+	.back-soluciones {
+		background-attachment: fixed;
+	    background-image: url("../img/soluciones/bg-m-s.png");
+	    background-size: cover;
+	}
+	.back-respaldo {
+		background-attachment: fixed;
+	    background-image: url("../img/respaldo/bg-m.png");
+	}
+	.back-circulo {
+		background-attachment: fixed;
+		background-image: url("../img/circulo/bg-c.jpg");
+	}
+	.back-contacto {
+		background-attachment: fixed;
+		background-image: url("../img/contacto/bg-m.png");
+	}
+}
